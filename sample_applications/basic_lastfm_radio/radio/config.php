@@ -1,8 +1,8 @@
 <?php
 
 $config = Array(
-	'api_key' => '',
-	'secret' => ''
+  'api_key' => '',
+  'secret' => ''
 );
 
 ?>

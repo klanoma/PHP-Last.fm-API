@@ -7,9 +7,9 @@ include 'template/header.php';
 
 <!-- Write the form to submit the username to results.php -->
 <form action="results.php" method="GET">
-	<label for="username">Your Last.fm username:</label>
-	<input type="text" name="username" />
-	<input type="submit" value="Go" />
+  <label for="username">Your Last.fm username:</label>
+  <input type="text" name="username" />
+  <input type="submit" value="Go" />
 </form>
 
 <?php

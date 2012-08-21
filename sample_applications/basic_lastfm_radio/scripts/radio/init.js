@@ -1,3 +1,3 @@
-$(document).ready(function(){
-	lastfmRadio.init();
+$(document).ready(function() {
+  lastfmRadio.init();
 });

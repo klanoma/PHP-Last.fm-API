@@ -7,16 +7,16 @@ require '../../lastfmapi/lastfmapi.php';
 $file = fopen('../auth.txt', 'r');
 // Put the auth data into an array
 $authVars = array(
-	'apiKey' => trim(fgets($file)),
-	'secret' => trim(fgets($file)),
-	'username' => trim(fgets($file)),
-	'sessionKey' => trim(fgets($file)),
-	'subscriber' => trim(fgets($file))
+  'apiKey' => trim(fgets($file)),
+  'secret' => trim(fgets($file)),
+  'username' => trim(fgets($file)),
+  'sessionKey' => trim(fgets($file)),
+  'subscriber' => trim(fgets($file))
 );
 $config = array(
-	'enabled' => true,
-	'path' => '../../lastfmapi/',
-	'cache_length' => 1800
+  'enabled' => true,
+  'path' => '../../lastfmapi/',
+  'cache_length' => 1800
 );
 // Pass the array to the auth class to eturn a valid auth
 $auth = new lastfmApiAuth('setsession', $authVars);
@@ -27,19 +27,19 @@ $albumClass = $apiClass->getPackage($auth, 'album', $config);
 
 // Setup the variables
 $methodVars = array(
-	'album' => 'In Rainbows',
-	'page' => 1,
-	'limit' => 10
+  'album' => 'In Rainbows',
+  'page' => 1,
+  'limit' => 10
 );
 
 if ( $results = $albumClass->search($methodVars) ) {
-	echo '<b>Data Returned</b>';
-	echo '<pre>';
-	print_r($results);
-	echo '</pre>';
+  echo '<b>Data Returned</b>';
+  echo '<pre>';
+  print_r($results);
+  echo '</pre>';
 }
 else {
-	die('<b>Error '.$albumClass->error['code'].' - </b><i>'.$albumClass->error['desc'].'</i>');
+  die('<b>Error '.$albumClass->error['code'].' - </b><i>'.$albumClass->error['desc'].'</i>');
 }
 
 ?>
